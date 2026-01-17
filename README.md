@@ -13,9 +13,9 @@ VS Code: Editor leve para visualização de código.
 Antes de baixar os arquivos, você precisa das ferramentas certas:
 **Unity Hub**: Baixe e instale o Unity Hub. Ele é o gerenciador de versões da Unity.
 Editor da Unity: Dentro do Unity Hub, na aba "Installs", instale uma versão estável (recomendo a 2018.4 LTS, que costumam ser compatíveis com esse projetos).Ao instalar, marque o módulo Android Build Support, para rodar no celular.
-Figura 1 - Editor Unity 2018.4.17f1 configurado com suporte para build Android.
-<img width="476" height="128" alt="Captura de tela 2026-01-17 112155" src="https://github.com/user-attachments/assets/147ab983-99f8-49df-86a7-39152d406368" />
-Fonte: Autoria Própria.
+                                      Figura 1 - Editor Unity 2018.4.17f1 configurado com suporte para build Android.
+  <img width="476" height="128" alt="Captura de tela 2026-01-17 112155" src="https://github.com/user-attachments/assets/147ab983-99f8-49df-86a7-39152d406368" />
+                                                                          Fonte: Autoria Própria.
 2. Baixando o Projeto
 
 Vá até a página do repositório: bkauan099/Carro-AR.
@@ -27,9 +27,9 @@ Clique no botão Add (ao lado de "New project").
 Navegue até na pasta extraída do seu computador.
 Procure pela pasta onde você extraiu o arquivo. O caminho deve ser parecido com este Carro-AR-main.
 Importante: Você deve selecionar a pasta que contém as subpastas Assets, Library e ProjectSettings. Se selecionar uma pasta "vazia", o Unity não reconhecerá o projeto.
-Figura 2 - Arquivo do Projeto Adicionado ao Unity.
+                                                      Figura 2 - Arquivo do Projeto Adicionado ao Unity.
 
-Fonte: Autoria Própria.
+                                                                   Fonte: Autoria Própria.
 Após a conclusão do download e a abertura do projeto no Unity, siga os passos abaixo para visualizar o conteúdo corretamente:
 Localize a aba Project: No painel inferior do Unity, navegue pela estrutura de pastas dentro de Assets.
 Acesse as Cenas: Procure e abra a pasta chamada Scenes (Cenas).
