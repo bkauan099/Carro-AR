@@ -26,6 +26,7 @@ Antes de baixar os arquivos, é necessário configurar as ferramentas de desenvo
 </div>
 
 <br>
+
 ### 2. Baixando o Projeto
 
 Para obter os arquivos necessários, siga estas etapas no GitHub:
@@ -49,15 +50,13 @@ Após extrair os arquivos, integre o projeto à engine:
 </div>
 
 <br>
+
 Após a conclusão do download e a abertura do projeto no Unity, siga os passos abaixo para visualizar o conteúdo corretamente:
 
-**Localize a aba Project**: No painel inferior do Unity, navegue pela estrutura de pastas dentro de Assets.
-
-**Acesse as Cenas**: Procure e abra a pasta chamada Scenes (Cenas).
-
-**Carregue a Cena Inicial**: Dentro desta pasta, localize o arquivo chamado intro (ícone do Unity) e dê um duplo clique sobre ele.
-
-**Visualize o Conteúdo**: A cena de introdução será carregada. Agora você poderá ver a interface inicial do projeto na aba Game.
+4. **Localize a aba Project**: No painel inferior do Unity, navegue pela estrutura de pastas dentro de `Assets`.
+5. **Acesse as Cenas**: Procure e abra a pasta chamada `Scenes` (Cenas).
+6. **Carregue a Cena Inicial**: Dentro desta pasta, localize o arquivo chamado `intro` (ícone da Unity) e dê um duplo clique sobre ele.
+7. **Visualize o Conteúdo**: A cena de introdução será carregada. Agora você poderá ver a interface inicial do projeto na aba **Game**, onde é possível testar a seleção de veículos.
 <div align="center">
   <p><b>Figura 3</b> - Interface Inicial do Projeto de Realidade Aumentada</p>
   <img width="603" height="313" alt="Captura de tela 2026-01-17 125112" src="https://github.com/user-attachments/assets/2c4fc935-1a3d-4150-bddf-9921bd4b1adb" />
@@ -65,36 +64,23 @@ Após a conclusão do download e a abertura do projeto no Unity, siga os passos 
 </div>
 
 <br>
-Para que a Realidade Aumentada funcione no modo Play dentro do Unity Editor, você precisa garantir que o motor do Vuforia esteja ativo e configurado corretamente. Como você está usando 
-a versão 2018.4.17f1, o processo é feito pelas configurações do Player.
 
-Aqui está o passo a passo para instalar e ativar:
+Para que a Realidade Aumentada funcione corretamente, é necessário garantir que o motor do Vuforia esteja ativo e configurado no projeto:
 
-**1. Ativação nas Configurações de XR**
-   
-Você deve seguir este caminho:
+#### 1. Ativação nas Configurações de XR
+Siga este caminho para habilitar o suporte no Android:
+* Vá ao menu superior em **Edit > Project Settings**.
+* Na lista à esquerda, selecione **Player**.
+* Clique no ícone do **Android** (o robô verde) para acessar as configurações de dispositivo móvel.
+* Role até a aba **XR Settings** e marque a caixa **Vuforia Augmented Reality Supported**.
+* *Atenção:* Se a opção não aparecer, utilize o link "Vuforia Augmented Reality" em "XR Support Installers" para baixar o módulo necessário.
 
-Vá ao menu superior em Edit > Project Settings.
+#### 2. Configuração da ARCamera
+Substitua a câmera padrão pelos componentes do Vuforia para ativar a RA:
+* Na sua **Hierarchy**, verifique se existe o objeto **ARCamera**.
+* Caso haja apenas uma *Main Camera* comum, ela deve ser substituída, pois não possui os sensores de rastreamento necessários.
+* Para adicionar, clique com o botão direito na Hierarchy e selecione **Vuforia Engine > AR Camera**.
 
-Na lista à esquerda, selecione Player.
-
-Clique no ícone do Android (o robozinho verde) para ver as configurações do celular.
-
-Role até encontrar a aba XR Settings.
-
-Marque a caixa Vuforia Augmented Reality Supported.
-
-**Atenção**: Se essa opção não aparecer, clique no link azul "Vuforia Augmented Reality" sob o título "XR Support Installers" para baixar o instalador necessário.
-
-**2. Configuração de ARCamera**
-
-Após ativar o suporte, você precisa que a sua cena utilize os componentes do Vuforia em vez de uma câmera comum:
-
-Na sua Hierarchy, verifique se existe um objeto chamado ARCamera.
-
-Se houver apenas uma Main Camera comum, ela não ativará a realidade aumentada.
-
-Para adicionar a câmera correta, clique com o botão direito na Hierarchy e vá em Vuforia Engine > AR Camera.
 <div align="center">
   <p><b>Figura 4</b> - Configuração para ativar o Vuforia</p>
   <img width="434" height="374" alt="Captura de tela 2026-01-17 125200" src="https://github.com/user-attachments/assets/06cafd23-49a2-4fc2-8278-0a9d5dccc564" />
@@ -112,18 +98,14 @@ Para adicionar a câmera correta, clique com o botão direito na Hierarchy e vá
 
 Na Figura 5 demonstra  como você pode interagir com o projeto:
 
-**Escolhendo o seu Carro**
+#### Escolhendo o seu Carro
+* **Navegação**: Utilize as setas laterais (**"<"** e **">"**) para navegar entre os modelos de carros disponíveis no objeto *Garage*.
+* **Seleção**: Conforme indicado na interface, clique diretamente sobre o modelo 3D para confirmar a escolha e avançar para o modo de Realidade Aumentada.
 
-		Na tela atual, você pode clicar nas setas laterais ("<" e ">") para navegar entre os diferentes modelos de carros disponíveis no seu objeto Garage.
-		
-		Como diz a mensagem na tela: "Clique no Carro para Começar". Ao clicar no modelo 3D, o sistema selecionará esse veículo para a visualização em AR.
-		
-**Ativando a Realidade Aumentada via Câmera**
-		Para ver o carro através da sua câmera (webcam), o fluxo do projeto geralmente funciona assim:
-		
-**Abertura da Câmera**: Ao avançar da tela de introdução (intro) para a cena principal (main), a Unity tentará ativar a sua webcam através do motor do Vuforia.
-
-**Uso de Marcadores**: Aponte a sua webcam para o Image Target (o marcador físico ou imagem) que você configurou. Se o Vuforia reconhecer a imagem, o carro que você escolheu aparecerá "fixado" sobre ela na tela do computador.
+####  Ativando a Realidade Aumentada
+Para visualizar o veículo através da câmera (Webcam ou Telemóvel), o fluxo funciona da seguinte forma:
+1. **Abertura da Câmara**: Ao avançar da cena `intro` para a cena `main`, a Unity ativa a câmara através do motor do **Vuforia Engine**.
+2. **Uso de Marcadores**: Aponte a câmara para o **Image Target** (marcador físico) configurado. Quando o sistema reconhecer o alvo, o carro escolhido aparecerá "fixado" sobre ele na tela.
 ### 4. Geração e Instalação do APK
 
 Para rodar o projeto no seu telemóvel Android, siga estes passos:
@@ -135,7 +117,7 @@ Para rodar o projeto no seu telemóvel Android, siga estes passos:
 3. **Gerar Arquivo:** Clique em **Build**, escolha uma pasta na sua máquina e dê um nome ao arquivo (ex: `CarroAR.apk`).
 <div align="center">
   <p><b>Figura 6</b> - Processo de Build e Geração do arquivo APK para Android</p>
-  <img width="1160" height="608" alt="image" src="https://github.com/user-attachments/assets/90fd551a-6869-4075-b000-68d5f84ab5a2" />
+  <img width="800" height="408" alt="image" src="https://github.com/user-attachments/assets/90fd551a-6869-4075-b000-68d5f84ab5a2" />
   <p><i>Fonte: Autoria Própria (2026).</i></p>
 </div>
 
@@ -146,24 +128,38 @@ Para rodar o projeto no seu telemóvel Android, siga estes passos:
 
 1. **Instalação:** Transfira o arquivo `CarroAR.apk` para o seu dispositivo Android e realize a instalação.
 2. **Permissões:** Ao abrir o app **AR-CASCA** pela primeira vez, autorize o acesso à **Câmera** para permitir o rastreamento do ambiente.
-3. **Seleção:** Na tela inicial, utilize  o modelo do veículo e clique sobre ele para iniciar a projeção.
-4. **Visualização:** Aponte a câmera para uma superfície plana para ver o carro surgir em 3D integrado ao mundo real.
-4. **Instalação:** Transfira o arquivo para o telemóvel, instale e **autorize o acesso à câmara** para que a Realidade Aumentada funcione corretamente.
+
 <div align="center">
-  <p><b>Figura 7</b> - Aplicativo CAR-AR em execução: Visualização de Realidade Aumentada no Android</p>
- <img width="576" height="1280" alt="image (1)" src="https://github.com/user-attachments/assets/87faea15-791b-4378-9e53-04f407c930a5" />
+  <p><b>Figura 7</b> - Aplicativo CAR-AR no Android</p>
+ <img width="300" height="1280" alt="image (1)" src="https://github.com/user-attachments/assets/87faea15-791b-4378-9e53-04f407c930a5" />
   <p><i>Fonte: Autoria Própria (2026).</i></p>
 </div>
 
 <br>
 
-**Tecnologias Utilizadas**
+3. **Seleção:** Na tela inicial, utilize  o modelo do veículo e clique sobre ele para iniciar a projeção.
+4. **Visualização:** Aponte a câmera para uma superfície plana para ver o carro surgir em 3D integrado ao mundo real.
+5. **Instalação:** Transfira o arquivo para o telemóvel, instale e **autorize o acesso à câmara** para que a Realidade Aumentada funcione corretamente.
+   
+<div align="center">
+  <p><b>Figura 8</b> - Aplicativo CAR-AR em execução: Visualização de Realidade Aumentada no Android</p>
+ <img width="400" height="595" alt="Captura de tela 2026-01-17 163424" src="https://github.com/user-attachments/assets/dd8243cc-d46f-4014-8722-858f0bd726a3" />
+<img width="400" height="611" alt="Captura de tela 2026-01-17 163436" src="https://github.com/user-attachments/assets/7bc96881-1512-4aee-9b08-26258b1e549f" />
 
-**Engine**: Unity 2018.3.x
+  <p><i>Fonte: Autoria Própria (2026).</i></p>
+</div>
 
-**Linguagem**: C# (C Sharp)
+<br>
 
-**AR**: ARFoundation ou Vuforia (conforme pacotes instalados).
+###  Tecnologias Utilizadas
+
+O projeto **Carro-AR** foi construído utilizando um ecossistema de ferramentas voltadas para o desenvolvimento de software 3D e experiências imersivas:
+
+* **Engine**: **Unity 2018.4 LTS** (Long Term Support), garantindo a estabilidade necessária para projetos de Realidade Aumentada.
+* **Linguagem**: **C# (C Sharp)**, utilizada para o desenvolvimento de todos os scripts de interação, navegação de interface e controle da garagem.
+* **Realidade Aumentada (AR)**: **Vuforia Engine**, responsável pelo rastreamento de imagens e projeção dos modelos 3D no ambiente real.
+
+.
 
 
 
