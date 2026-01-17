@@ -158,7 +158,7 @@ Para rodar o projeto no seu telemóvel Android, siga estes passos:
   
   <img width="493" height="478" alt="image (2)" src="https://github.com/user-attachments/assets/52bbd5ae-894f-4980-a45c-9e535b9eb70f" />
   
-  <p><b>Figura 8</b> - QR Code para download do Aplicativo Carro-AR</p>
+  <p><b>Figura 9</b> - QR Code para download do Aplicativo Carro-AR</p>
   <p><i>Fonte: Autoria Própria (2026).</i></p>
 </div>
 
