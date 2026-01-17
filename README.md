@@ -13,10 +13,10 @@ VS Code: Editor leve para visualização de código.
 Antes de baixar os arquivos, você precisa das ferramentas certas:
 **Unity Hub**: Baixe e instale o Unity Hub. Ele é o gerenciador de versões da Unity.
 Editor da Unity: Dentro do Unity Hub, na aba "Installs", instale uma versão estável (recomendo a 2018.4 LTS, que costumam ser compatíveis com esse projetos).Ao instalar, marque o módulo Android Build Support, para rodar no celular.
-                                      Figura 1 - Editor Unity 2018.4.17f1 configurado com suporte para build Android.
+Figura 1 - Editor Unity 2018.4.17f1 configurado com suporte para build Android.
   <img width="476" height="128" alt="Captura de tela 2026-01-17 112155" src="https://github.com/user-attachments/assets/147ab983-99f8-49df-86a7-39152d406368" />
-                                                                          Fonte: Autoria Própria.
-2. Baixando o Projeto
+Fonte: Autoria Própria.
+2.** Baixando o Projeto**
 
 Vá até a página do repositório: bkauan099/Carro-AR.
 Clique no botão verde "Code".
@@ -27,15 +27,17 @@ Clique no botão Add (ao lado de "New project").
 Navegue até na pasta extraída do seu computador.
 Procure pela pasta onde você extraiu o arquivo. O caminho deve ser parecido com este Carro-AR-main.
 Importante: Você deve selecionar a pasta que contém as subpastas Assets, Library e ProjectSettings. Se selecionar uma pasta "vazia", o Unity não reconhecerá o projeto.
-                                                      Figura 2 - Arquivo do Projeto Adicionado ao Unity.
+Figura 2 - Arquivo do Projeto Adicionado ao Unity.
+<img width="506" height="149" alt="Captura de tela 2026-01-17 125032" src="https://github.com/user-attachments/assets/70cd1549-3b5b-4bd7-943a-929e81746746" />
 
-                                                                   Fonte: Autoria Própria.
+Fonte: Autoria Própria.
 Após a conclusão do download e a abertura do projeto no Unity, siga os passos abaixo para visualizar o conteúdo corretamente:
 Localize a aba Project: No painel inferior do Unity, navegue pela estrutura de pastas dentro de Assets.
 Acesse as Cenas: Procure e abra a pasta chamada Scenes (Cenas).
 Carregue a Cena Inicial: Dentro desta pasta, localize o arquivo chamado intro (ícone do Unity) e dê um duplo clique sobre ele.
 Visualize o Conteúdo: A cena de introdução será carregada. Agora você poderá ver a interface inicial do projeto na aba Game.
 Figura 3 - Interface Inicial do Projeto de Realidade Aumentada.
+<img width="603" height="313" alt="Captura de tela 2026-01-17 125112" src="https://github.com/user-attachments/assets/2c4fc935-1a3d-4150-bddf-9921bd4b1adb" />
 
 Fonte: Autoria Própria.
 Para que a Realidade Aumentada funcione no modo Play dentro do Unity Editor, você precisa garantir que o motor do Vuforia esteja ativo e configurado corretamente. Como você está usando a versão 2018.4.17f1, o processo é feito pelas configurações do Player.
@@ -54,13 +56,11 @@ Na sua Hierarchy, verifique se existe um objeto chamado ARCamera.
 Se houver apenas uma Main Camera comum, ela não ativará a realidade aumentada.
 Para adicionar a câmera correta, clique com o botão direito na Hierarchy e vá em Vuforia Engine > AR Camera.
 Figura 4 - Configuração para ativar o Vuforia.
-
+<img width="434" height="374" alt="Captura de tela 2026-01-17 125200" src="https://github.com/user-attachments/assets/06cafd23-49a2-4fc2-8278-0a9d5dccc564" />
 Fonte: Autoria Própria.
 
-
-
-
 Figura 5 - Interação com a Realidade Aumentada.
+<img width="605" height="289" alt="Captura de tela 2026-01-17 125250" src="https://github.com/user-attachments/assets/9f9901c3-93ea-4d43-ad61-8671dff08150" />
 
 Fonte: Autoria Própria.
 
