@@ -150,6 +150,21 @@ Para rodar o projeto no seu telemóvel Android, siga estes passos:
 </div>
 
 <br>
+<hr>
+
+<div align="center">
+  <h3> 7. Teste Você Mesmo!</h3>
+  <p>Escaneie o QR Code abaixo para baixar o APK diretamente no seu Android e testar a Realidade Aumentada agora mesmo.</p>
+  
+  <img width="493" height="478" alt="image (2)" src="https://github.com/user-attachments/assets/52bbd5ae-894f-4980-a45c-9e535b9eb70f" />
+  
+  <p><b>Figura 8</b> - QR Code para download do Aplicativo Carro-AR</p>
+  <p><i>Fonte: Autoria Própria (2026).</i></p>
+</div>
+
+<br>
+
+> **Nota:** Para que a experiência funcione, lembre-se de imprimir ou exibir em outra tela o **Image Target** (Marcador) utilizado no projeto para que a ARCamera possa identificar o ponto de ancoragem do veículo.
 
 ###  Tecnologias Utilizadas
 
